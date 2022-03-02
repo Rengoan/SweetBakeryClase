@@ -41,7 +41,7 @@ public class ClienteServiceImpl implements ClienteServiceRemote, ClienteService 
 
     @Override
     public void registrarCliente(Cliente cliente) {
-        clienteDao.insertUsuario(cliente);
+        clienteDao.insertCliente(cliente);
     }
 
     @Override

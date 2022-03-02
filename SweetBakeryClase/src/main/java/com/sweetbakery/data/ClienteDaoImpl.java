@@ -53,7 +53,7 @@ public class ClienteDaoImpl implements ClienteDao{
     }
 
     @Override
-    public void insertUsuario(Cliente cliente) {
+    public void insertCliente(Cliente cliente) {
         em.persist(cliente);
     }
 

@@ -20,7 +20,7 @@ public interface ClienteDao {
     
     public Cliente findClienteByUsername(Cliente cliente);
     
-    public void insertUsuario(Cliente cliente);
+    public void insertCliente(Cliente cliente);
 
     public void updateCliente(Cliente cliente);
     
