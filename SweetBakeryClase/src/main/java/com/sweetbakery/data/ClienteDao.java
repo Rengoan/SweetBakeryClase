@@ -5,10 +5,25 @@
  */
 package com.sweetbakery.data;
 
+import com.sweetbakery.domain.Cliente;
+import java.util.List;
+
 /**
  *
  * @author Lukelar
  */
-public class ClienteDao {
+public interface ClienteDao {
+    
+    public List<Cliente> findAllClientes();
+    
+    public Cliente findClienteByID(Cliente cliente);
+    
+    public Cliente findClienteByUsername(Cliente cliente);
+    
+    public void insertUsuario(Cliente cliente);
+
+    public void updateCliente(Cliente cliente);
+    
+    public void deleteCliente(Cliente cliente);    
     
 }
