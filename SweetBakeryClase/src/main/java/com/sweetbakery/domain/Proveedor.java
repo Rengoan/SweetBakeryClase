@@ -51,6 +51,25 @@ public class Proveedor implements Serializable {
     @ManyToOne(optional = false)
     private Empleado empleado;
 
+    public Proveedor(Integer idproveedor, String nombre, String correo, String telefono, String direccion, Empleado empleado) {
+        this.idproveedor = idproveedor;
+        this.nombre = nombre;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.empleado = empleado;
+    }
+
+    public Proveedor(String nombre, String correo, String telefono, String direccion, Empleado empleado) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.empleado = empleado;
+    }
+
+    
+    
     public Proveedor() {
     }
 

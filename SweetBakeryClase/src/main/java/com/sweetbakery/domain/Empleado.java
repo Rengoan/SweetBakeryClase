@@ -59,6 +59,33 @@ public class Empleado implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "empleado")
     private Collection<Proveedor> proveedorCollection;
 
+    public Empleado(Integer idempleado, String nombre, String apellido, String telefono, String correo, String usuario, String pass, String direccion, Collection<Pedido> pedidoCollection, Collection<Proveedor> proveedorCollection) {
+        this.idempleado = idempleado;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.pass = pass;
+        this.direccion = direccion;
+        this.pedidoCollection = pedidoCollection;
+        this.proveedorCollection = proveedorCollection;
+    }
+
+    public Empleado(String nombre, String apellido, String telefono, String correo, String usuario, String pass, String direccion, Collection<Pedido> pedidoCollection, Collection<Proveedor> proveedorCollection) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.pass = pass;
+        this.direccion = direccion;
+        this.pedidoCollection = pedidoCollection;
+        this.proveedorCollection = proveedorCollection;
+    }
+    
+    
+
     public Empleado() {
     }
 
@@ -168,7 +195,22 @@ public class Empleado implements Serializable {
 
     @Override
     public String toString() {
-        return "com.sweetbakery.domain.Empleado[ idempleado=" + idempleado + " ]";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empleado{");
+        sb.append("idempleado=").append(idempleado);
+        sb.append(", nombre=").append(nombre);
+        sb.append(", apellido=").append(apellido);
+        sb.append(", telefono=").append(telefono);
+        sb.append(", correo=").append(correo);
+        sb.append(", usuario=").append(usuario);
+        sb.append(", pass=").append(pass);
+        sb.append(", direccion=").append(direccion);
+        sb.append(", pedidoCollection=").append(pedidoCollection);
+        sb.append(", proveedorCollection=").append(proveedorCollection);
+        sb.append('}');
+        return sb.toString();
     }
+
+    
     
 }

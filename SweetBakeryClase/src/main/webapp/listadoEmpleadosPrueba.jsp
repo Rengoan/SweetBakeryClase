@@ -9,7 +9,7 @@
         <h1>Listado de Empleados</h1>
         <ul>
             <c:forEach items="${empleados}" var="empleado">
-                <li>${empleados.nombre} ${empleados.apellido} </li>
+                <li>${empleado.nombre} ${empleado.apellido} </li>
             </c:forEach>
         </ul>
     </body>

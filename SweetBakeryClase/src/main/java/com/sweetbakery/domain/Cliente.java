@@ -57,6 +57,31 @@ public class Cliente implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
     private Collection<Pedido> pedidoCollection;
 
+    public Cliente(String nombre, String apellido, String telefono, String correo, String usuario, String pass, String direccion, Collection<Pedido> pedidoCollection) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.pass = pass;
+        this.direccion = direccion;
+        this.pedidoCollection = pedidoCollection;
+    }
+
+    public Cliente(Integer idcliente, String nombre, String apellido, String telefono, String correo, String usuario, String pass, String direccion, Collection<Pedido> pedidoCollection) {
+        this.idcliente = idcliente;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.pass = pass;
+        this.direccion = direccion;
+        this.pedidoCollection = pedidoCollection;
+    }
+    
+    
+
     public Cliente() {
     }
 
@@ -158,7 +183,21 @@ public class Cliente implements Serializable {
 
     @Override
     public String toString() {
-        return "com.sweetbakery.domain.Cliente[ idcliente=" + idcliente + " ]";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cliente{");
+        sb.append("idcliente=").append(idcliente);
+        sb.append(", nombre=").append(nombre);
+        sb.append(", apellido=").append(apellido);
+        sb.append(", telefono=").append(telefono);
+        sb.append(", correo=").append(correo);
+        sb.append(", usuario=").append(usuario);
+        sb.append(", pass=").append(pass);
+        sb.append(", direccion=").append(direccion);
+        sb.append(", pedidoCollection=").append(pedidoCollection);
+        sb.append('}');
+        return sb.toString();
     }
+
+    
     
 }

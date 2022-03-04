@@ -45,6 +45,23 @@ public class Detallespedido implements Serializable {
     @ManyToOne(optional = false)
     private Producto producto;
 
+    public Detallespedido(Integer iddetallespedido, Double precioVente, Integer cantidad, Pedido pedido, Producto producto) {
+        this.iddetallespedido = iddetallespedido;
+        this.precioVente = precioVente;
+        this.cantidad = cantidad;
+        this.pedido = pedido;
+        this.producto = producto;
+    }
+
+    public Detallespedido(Double precioVente, Integer cantidad, Pedido pedido, Producto producto) {
+        this.precioVente = precioVente;
+        this.cantidad = cantidad;
+        this.pedido = pedido;
+        this.producto = producto;
+    }
+    
+    
+
     public Detallespedido() {
     }
 

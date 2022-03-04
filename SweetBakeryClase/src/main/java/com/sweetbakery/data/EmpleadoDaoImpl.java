@@ -7,6 +7,7 @@ package com.sweetbakery.data;
 
 import com.sweetbakery.domain.Empleado;
 import java.util.List;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -15,6 +16,7 @@ import javax.persistence.Query;
  *
  * @author Lukelar
  */
+@Stateless
 public class EmpleadoDaoImpl implements EmpleadoDao {
 
     // El EJB se encarga de forma automática de hacer las transacciones.

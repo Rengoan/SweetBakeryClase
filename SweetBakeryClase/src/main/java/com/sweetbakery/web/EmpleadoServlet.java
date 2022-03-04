@@ -39,7 +39,7 @@ public class EmpleadoServlet extends HttpServlet {
         System.out.println("Empleados: " + empleados);
         
         // Ponemos personas en un alcance
-        request.setAttribute("Empleados", empleados);
+        request.setAttribute("empleados", empleados);
         
         // Redirigimos al JSP
         request.getRequestDispatcher("/listadoEmpleadosPrueba.jsp").forward(request, 

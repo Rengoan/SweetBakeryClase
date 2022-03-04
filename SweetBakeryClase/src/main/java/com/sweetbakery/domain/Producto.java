@@ -47,6 +47,25 @@ public class Producto implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "producto")
     private Collection<Detallespedido> detallespedidoCollection;
 
+    public Producto(Integer idproducto, String nombre, String categoria, Double precio, Integer stock, Collection<Detallespedido> detallespedidoCollection) {
+        this.idproducto = idproducto;
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.precio = precio;
+        this.stock = stock;
+        this.detallespedidoCollection = detallespedidoCollection;
+    }
+
+    public Producto(String nombre, String categoria, Double precio, Integer stock, Collection<Detallespedido> detallespedidoCollection) {
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.precio = precio;
+        this.stock = stock;
+        this.detallespedidoCollection = detallespedidoCollection;
+    }
+    
+    
+
     public Producto() {
     }
 
