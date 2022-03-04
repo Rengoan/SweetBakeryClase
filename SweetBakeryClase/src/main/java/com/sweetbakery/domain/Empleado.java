@@ -59,6 +59,33 @@ public class Empleado implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "empleado")
     private Collection<Proveedor> proveedorCollection;
 
+    public Empleado(Integer idempleado, String nombre, String apellido, String telefono, String correo, String usuario, String pass, String direccion, Collection<Pedido> pedidoCollection, Collection<Proveedor> proveedorCollection) {
+        this.idempleado = idempleado;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.pass = pass;
+        this.direccion = direccion;
+        this.pedidoCollection = pedidoCollection;
+        this.proveedorCollection = proveedorCollection;
+    }
+
+    public Empleado(String nombre, String apellido, String telefono, String correo, String usuario, String pass, String direccion, Collection<Pedido> pedidoCollection, Collection<Proveedor> proveedorCollection) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.pass = pass;
+        this.direccion = direccion;
+        this.pedidoCollection = pedidoCollection;
+        this.proveedorCollection = proveedorCollection;
+    }
+    
+    
+
     public Empleado() {
     }
 

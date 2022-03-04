@@ -57,6 +57,31 @@ public class Cliente implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
     private Collection<Pedido> pedidoCollection;
 
+    public Cliente(String nombre, String apellido, String telefono, String correo, String usuario, String pass, String direccion, Collection<Pedido> pedidoCollection) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.pass = pass;
+        this.direccion = direccion;
+        this.pedidoCollection = pedidoCollection;
+    }
+
+    public Cliente(Integer idcliente, String nombre, String apellido, String telefono, String correo, String usuario, String pass, String direccion, Collection<Pedido> pedidoCollection) {
+        this.idcliente = idcliente;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.pass = pass;
+        this.direccion = direccion;
+        this.pedidoCollection = pedidoCollection;
+    }
+    
+    
+
     public Cliente() {
     }
 

@@ -52,6 +52,25 @@ public class Pedido implements Serializable {
     @ManyToOne(optional = false)
     private Empleado empleado;
 
+    public Pedido(Integer idpedido, Date fecha, Double total, Collection<Detallespedido> detallespedidoCollection, Cliente cliente, Empleado empleado) {
+        this.idpedido = idpedido;
+        this.fecha = fecha;
+        this.total = total;
+        this.detallespedidoCollection = detallespedidoCollection;
+        this.cliente = cliente;
+        this.empleado = empleado;
+    }
+
+    public Pedido(Date fecha, Double total, Collection<Detallespedido> detallespedidoCollection, Cliente cliente, Empleado empleado) {
+        this.fecha = fecha;
+        this.total = total;
+        this.detallespedidoCollection = detallespedidoCollection;
+        this.cliente = cliente;
+        this.empleado = empleado;
+    }
+    
+    
+
     public Pedido() {
     }
 
