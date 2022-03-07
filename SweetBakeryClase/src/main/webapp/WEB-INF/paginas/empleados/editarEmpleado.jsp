@@ -12,10 +12,10 @@
         <!-- Inlcude de nuestro header -->
         <jsp:include page="/WEB-INF/paginas/comunes/header.jsp" />
 
-        <form action="ClienteServlet?accion=modificar&idcliente=${cliente.idcliente}"
+        <form action="EmpleadoServlet?accion=modificar&idempleado=${empleado.idempleado}"
               method="POST" class="was-validated">
 
-            <jsp:include page="/WEB-INF/paginas/clientes/editar.jsp" />
+            <jsp:include page="/WEB-INF/paginas/empleados/botonEditarEmpleado.jsp" />
 
             <section id="details">
                 <div class="container">
@@ -28,31 +28,31 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="nombre">Nombre</label>
-                                        <input type="text" class="form-control" name="nombre" required value="${cliente.nombre}" />
+                                        <input type="text" class="form-control" name="nombre" required value="${empleado.nombre}" />
                                     </div>
                                     <div class="form-group">
                                         <label for="apellido">Apellidos</label>
-                                        <input type="text" class="form-control" name="apellido" required value="${cliente.apellido}" />
+                                        <input type="text" class="form-control" name="apellido" required value="${empleado.apellido}" />
                                     </div>
                                     <div class="form-group">
                                         <label for="telefono">Telefono</label>
-                                        <input type="tel" class="form-control" name="telefono" value="${cliente.telefono}" />
+                                        <input type="tel" class="form-control" name="telefono" value="${empleado.telefono}" />
                                     </div>
                                     <div class="form-group">
                                         <label for="correo">Correo</label>
-                                        <input type="email" class="form-control" name="correo" required value="${cliente.correo}" />
+                                        <input type="email" class="form-control" name="correo" required value="${empleado.correo}" />
                                     </div>
                                     <div class="form-group">
                                         <label for="usuario">Usuario</label>
-                                        <input type="text" class="form-control" name="usuario" value="${cliente.usuario}" />
+                                        <input type="text" class="form-control" name="usuario" value="${empleado.usuario}" />
                                     </div>
                                     <div class="form-group">
                                         <label for="pass">Contraseña</label>
-                                        <input type="password" class="form-control" name="pass" value="${cliente.pass}" />
+                                        <input type="password" class="form-control" name="pass" value="${empleado.pass}" />
                                     </div>
                                     <div class="form-group">
                                         <label for="direccion">Direccion</label>
-                                        <input type="text" class="form-control" name="direccion" value="${cliente.direccion}" />
+                                        <input type="text" class="form-control" name="direccion" value="${empleado.direccion}" />
                                     </div>
                                 </div>
                             </div>
@@ -71,3 +71,4 @@
 
     </body>
 </html>
+

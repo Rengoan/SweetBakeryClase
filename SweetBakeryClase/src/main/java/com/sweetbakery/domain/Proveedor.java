@@ -68,6 +68,22 @@ public class Proveedor implements Serializable {
         this.empleado = empleado;
     }
 
+    public Proveedor(Integer idproveedor, String nombre, String correo, String telefono, String direccion) {
+        this.idproveedor = idproveedor;
+        this.nombre = nombre;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
+
+    public Proveedor(String nombre, String correo, String telefono, String direccion) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
+
+    
     
     
     public Proveedor() {

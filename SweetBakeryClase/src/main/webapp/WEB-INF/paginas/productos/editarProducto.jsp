@@ -6,16 +6,16 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/5c465338f1.js" crossorigin="anonymous"></script>                        
-        <title>Editar Cliente</title>
+        <title>Editar Producto</title>
     </head>
     <body>
         <!-- Inlcude de nuestro header -->
         <jsp:include page="/WEB-INF/paginas/comunes/header.jsp" />
 
-        <form action="ClienteServlet?accion=modificar&idcliente=${cliente.idcliente}"
+        <form action="ProductoServlet?accion=modificar&idproducto=${producto.idproducto}"
               method="POST" class="was-validated">
 
-            <jsp:include page="/WEB-INF/paginas/clientes/editar.jsp" />
+            <jsp:include page="/WEB-INF/paginas/productos/botonEditarProducto.jsp" />
 
             <section id="details">
                 <div class="container">
@@ -23,36 +23,24 @@
                         <div class="col">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Editar Cliente</h4>
+                                    <h4>Editar Producto</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="nombre">Nombre</label>
-                                        <input type="text" class="form-control" name="nombre" required value="${cliente.nombre}" />
+                                        <input type="text" class="form-control" name="nombre" required value="${producto.nombre}" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="apellido">Apellidos</label>
-                                        <input type="text" class="form-control" name="apellido" required value="${cliente.apellido}" />
+                                        <label for="categoria">Categoria</label>
+                                        <input type="text" class="form-control" name="categoria" required value="${producto.categoria}" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="telefono">Telefono</label>
-                                        <input type="tel" class="form-control" name="telefono" value="${cliente.telefono}" />
+                                        <label for="precio">Precio</label>
+                                        <input type="number" class="form-control" name="precio" required step="any" value="${producto.precio}" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="correo">Correo</label>
-                                        <input type="email" class="form-control" name="correo" required value="${cliente.correo}" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="usuario">Usuario</label>
-                                        <input type="text" class="form-control" name="usuario" value="${cliente.usuario}" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pass">Contraseña</label>
-                                        <input type="password" class="form-control" name="pass" value="${cliente.pass}" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="direccion">Direccion</label>
-                                        <input type="text" class="form-control" name="direccion" value="${cliente.direccion}" />
+                                        <label for="stock">Stock</label>
+                                        <input type="number" class="form-control" name="stock" required step="any" value="${producto.stock}" />
                                     </div>
                                 </div>
                             </div>
