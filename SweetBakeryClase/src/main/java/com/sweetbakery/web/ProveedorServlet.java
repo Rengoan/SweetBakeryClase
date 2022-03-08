@@ -85,7 +85,7 @@ public class ProveedorServlet extends HttpServlet {
         // 2. Definimos un objeto session para compartir nuestro atributos en un contexto más amplio
         HttpSession sesion = request.getSession();
         
-        sesion.setAttribute("proveedor", proveedores);
+        sesion.setAttribute("proveedores", proveedores);
         sesion.setAttribute("totalProveedores", proveedores.size());
         
         // Ponemos personas en un alcance
@@ -146,11 +146,18 @@ public class ProveedorServlet extends HttpServlet {
         String correo = request.getParameter("correo");
         String telefono = request.getParameter("telefono");
         String direccion = request.getParameter("direccion");
+        int idEmpleado = Integer.parseInt(request.getParameter("empleado"));
+        
+        
+        
+        
+        Empleado empleado = new Empleado(idEmpleado);
+        //Proveedor proveedor = new Proveedor(nombre, correo, telefono, direccion, empleado);
         
        
         
         // 2. Creamos el objeto del cliente que queremos actualizar
-        Proveedor proveedor = new Proveedor(idProveedor, nombre, correo, telefono, direccion);
+        Proveedor proveedor = new Proveedor(idProveedor, nombre, correo, telefono, direccion,empleado);
         
         // 3. Invocamos el método de acceso a datos para actualizar el cliente
         proveedorService.modificarProveedor(proveedor);

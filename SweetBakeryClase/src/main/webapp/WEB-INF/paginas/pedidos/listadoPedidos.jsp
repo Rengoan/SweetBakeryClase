@@ -7,16 +7,16 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="card-header">
-                    <h4>Listado Proveedores</h4>
+                    <h4>Listado Pedidos</h4>
                 </div>
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
                             <th>#</th>
-                            <th>Nombre</th>
-                            <th>Correo</th>
-                            <th>Telefono</th>
-                            <th>Direccion</th>
+                            <th>Fecha</th>
+                            <th>Total</th>
+                            <th>ID Cliente</th>
+                            <th>Nombre Cliente</th>
                             <th>ID Empleado</th>
                             <th>Nombre Empleado</th>
                             <th></th>
@@ -24,17 +24,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach var="proveedor" items="${proveedores}" varStatus="status">
+                        <c:forEach var="pedido" items="${pedidos}" varStatus="status">
                             <tr>
-                                <td>${proveedor.idproveedor}</td>
-                                <td>${proveedor.nombre}</td>
-                                <td>${proveedor.correo}</td>
-                                <td>${proveedor.telefono} </td>
-                                <td>${proveedor.direccion} </td>
-                                <td>${proveedor.empleado.idempleado}</td>
-                                <td>${proveedor.empleado.nombre} </td>
+                                <td>${pedido.idpedido}</td>
+                                <td>${pedido.fecha}</td>
+                                <td>${pedido.total}</td>
+                                <td>${pedido.cliente.idcliente}</td>
+                                <td>${pedido.cliente.nombre} </td>
+                                <td>${pedido.empleado.idempleado}</td>
+                                <td>${pedido.empleado.nombre} </td>
                                 <td>
-                                    <a href="ProveedorServlet?accion=editar&idproveedor=${proveedor.idproveedor}" class="btn btn-secondary">
+                                    <a href="PedidoServlet?accion=editar&idpedido=${pedido.idpedido}" class="btn btn-secondary">
                                         <i class="fas fa-angle-double-right bg-success"></i> Editar
                                     </a>
 
@@ -49,9 +49,9 @@
 
                 <div class="card text-center bg-warning text-white mb-3">
                     <div class="card-body">
-                        <h1>Total Proveedores</h1>
+                        <h1>Total Pedidos</h1>
                         <h4 class="display-4">
-                            <i class="fas fa-users"></i> ${totalProveedores}
+                            <i class="fas fa-users"></i> ${totalPedidos}
                         </h4>
                     </div>
                 </div>
@@ -61,4 +61,4 @@
 </section>
 
 <!-- Agregamos el modal de agregar empleado -->
-<jsp:include page="/WEB-INF/paginas/proveedores/agregarProveedor.jsp" />
+<jsp:include page="/WEB-INF/paginas/pedidos/agregarPedido.jsp" />

@@ -6,16 +6,16 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/5c465338f1.js" crossorigin="anonymous"></script>                        
-        <title>Editar Proveedor</title>
+        <title>Editar Pedido</title>
     </head>
     <body>
         <!-- Inlcude de nuestro header -->
         <jsp:include page="/WEB-INF/paginas/comunes/header.jsp" />
 
-        <form action="ProveedorServlet?accion=modificar&idproveedor=${proveedor.idproveedor}"
+        <form action="PedidoServlet?accion=modificar&idpedido=${pedido.idpedido}"
               method="POST" class="was-validated">
 
-            <jsp:include page="/WEB-INF/paginas/proveedores/botonEditarProveedores.jsp" />
+            <jsp:include page="/WEB-INF/paginas/pedidos/botonEditarPedidos.jsp" />
 
             <section id="details">
                 <div class="container">
@@ -23,33 +23,22 @@
                         <div class="col">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4>Editar Proveedor</h4>
+                                    <h4>Editar Pedido</h4>
                                 </div>
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="nombre">Nombre</label>
-                                        <input type="text" class="form-control" name="nombre" required value="${proveedor.nombre}" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="correo">Correo</label>
-                                        <input type="email" class="form-control" name="correo" required value="${proveedor.correo}" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="telefono">Telefono</label>
-                                        <input type="tel" class="form-control" name="telefono" required value="${proveedor.telefono}" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="direccion">Direccion</label>
-                                        <input type="text" class="form-control" name="direccion" required value="${proveedor.direccion}" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="empleado">ID Empleado</label>
-                                        <input type="number" class="form-control" name="empleado" required value="${proveedor.empleado.idempleado}" />
-                                    </div>
+                                <div class="form-group">
+                                    <label for="total">Total</label>
+                                    <input type="number" class="form-control" name="total" required value="${pedido.total}" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="empleado">ID Empleado</label>
+                                    <input type="number" class="form-control" name="empleado" required value="${pedido.empleado.idempleado}" />
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                </div>
                 </div>
             </section>
 

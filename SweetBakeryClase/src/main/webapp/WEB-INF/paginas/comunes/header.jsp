@@ -14,6 +14,9 @@
             <div class="col-md-6">
                 <a href="EmpleadoServlet"> <h1><i class="fas fa-cog"></i>Empleados</h1></a>
             </div>
+            <div class="col-md-6">
+                <a href="PedidoServlet"> <h1><i class="fas fa-cog"></i>Pedidos</h1></a>
+            </div>
         </div>
     </div>
 </header>

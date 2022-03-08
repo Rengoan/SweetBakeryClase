@@ -68,6 +68,30 @@ public class Pedido implements Serializable {
         this.cliente = cliente;
         this.empleado = empleado;
     }
+
+    public Pedido(Date fecha, Double total, Cliente cliente, Empleado empleado) {
+        this.fecha = fecha;
+        this.total = total;
+        this.cliente = cliente;
+        this.empleado = empleado;
+    }
+
+    public Pedido(Integer idpedido, Date fecha, Double total, Cliente cliente, Empleado empleado) {
+        this.idpedido = idpedido;
+        this.fecha = fecha;
+        this.total = total;
+        this.cliente = cliente;
+        this.empleado = empleado;
+    }
+
+    public Pedido(Integer idpedido, Double total, Empleado empleado) {
+        this.idpedido = idpedido;
+        this.total = total;
+        this.empleado = empleado;
+    }
+    
+    
+    
     
     
 
