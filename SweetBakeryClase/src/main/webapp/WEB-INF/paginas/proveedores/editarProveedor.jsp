@@ -43,8 +43,8 @@
                                         <input type="text" class="form-control" name="direccion" required value="${proveedor.direccion}" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="empleado_idempleado">ID Empleado</label>
-                                        <input type="number" class="form-control" name="empleado_idempleado" required value="${proveedor.empleado_idempleado}" />
+                                        <label for="empleado">ID Empleado</label>
+                                        <input type="number" class="form-control" name="empleado" required value="${proveedor.empleado}" />
                                     </div>
                                 </div>
                             </div>

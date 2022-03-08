@@ -27,10 +27,6 @@
                         <label for="stock">Stock</label>
                         <input type="number" class="form-control" name="stock" required step="any" value="${producto.stock}" />
                     </div>
-                    <div class="form-group">
-                        <label for="empleado_idempleado">ID Empleado</label>
-                        <input type="number" class="form-control" name="empleado_idempleado" required value="${proveedor.empleado_idempleado}" />
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-primary" type="submit">Guardar</button> 

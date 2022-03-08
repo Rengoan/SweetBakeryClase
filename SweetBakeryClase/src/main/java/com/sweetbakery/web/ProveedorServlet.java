@@ -109,7 +109,8 @@ public class ProveedorServlet extends HttpServlet {
         
         
         
-        Proveedor proveedor = new Proveedor(nombre, correo, telefono, direccion, (new Empleado(idEmpleado)));
+        Empleado empleado = new Empleado(idEmpleado);
+        Proveedor proveedor = new Proveedor(nombre, correo, telefono, direccion, empleado);
         //3. Invocamos al método de acceso a datos que inserta un empleado
         proveedorService.registrarProveedor(proveedor);
         //4. Redirigimos a la acción por defecto
