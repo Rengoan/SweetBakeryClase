@@ -20,8 +20,8 @@
                         <input type="number" class="form-control" name="total" required value="${pedido.total}" />
                     </div>
                     <div class="form-group">
-                        <label for="empleado">ID Cliente</label>
-                        <input type="number" class="form-control" name="empleado" required value="${pedido.cliente.idcliente}" />
+                        <label for="cliente">ID Cliente</label>
+                        <input type="number" class="form-control" name="cliente" required value="${pedido.cliente.idcliente}" />
                     </div>
                     <div class="form-group">
                         <label for="empleado">ID Empleado</label>

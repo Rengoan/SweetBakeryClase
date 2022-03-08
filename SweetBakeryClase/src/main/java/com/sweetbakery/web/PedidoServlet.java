@@ -163,19 +163,22 @@ public class PedidoServlet extends HttpServlet {
         // 1. Recuperamos los parámetros pasamos por el formulario
         int idPedido = Integer.parseInt(request.getParameter("idpedido"));
 
-       
+       SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 
         //1. Recuperamos los parámetros del request
+        Date fecha = df.parse(request.getParameter("fecha"));
         
         Double total = Double.parseDouble(request.getParameter("total"));
+        int idCliente = Integer.parseInt(request.getParameter("cliente"));
         int idEmpleado = Integer.parseInt(request.getParameter("empleado"));
 
+        Cliente cliente = new Cliente(idCliente);
         Empleado empleado = new Empleado(idEmpleado);
         
         //Proveedor proveedor = new Proveedor(nombre, correo, telefono, direccion, empleado);
 
         // 2. Creamos el objeto del cliente que queremos actualizar
-        Pedido pedido = new Pedido(idPedido,total, empleado);
+        Pedido pedido = new Pedido(idPedido, fecha, total, cliente, empleado);
 
         // 3. Invocamos el método de acceso a datos para actualizar el cliente
         pedidoService.modificarPedido(pedido);

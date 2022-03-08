@@ -26,18 +26,26 @@
                                     <h4>Editar Pedido</h4>
                                 </div>
                                 <div class="card-body">
-                                <div class="form-group">
-                                    <label for="total">Total</label>
-                                    <input type="number" class="form-control" name="total" required value="${pedido.total}" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="empleado">ID Empleado</label>
-                                    <input type="number" class="form-control" name="empleado" required value="${pedido.empleado.idempleado}" />
+                                    <div class="form-group">
+                                        <label for="fecha">Fecha</label>
+                                        <input type="date" class="form-control" name="fecha"  value="${pedido.fecha}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="total">Total</label>
+                                        <input type="number" class="form-control" name="total" required value="${pedido.total}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cliente">ID Cliente</label>
+                                        <input type="number" class="form-control" name="cliente" required value="${pedido.cliente.idcliente}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="empleado">ID Empleado</label>
+                                        <input type="number" class="form-control" name="empleado" required value="${pedido.empleado.idempleado}" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 </div>
             </section>

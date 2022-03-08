@@ -89,6 +89,13 @@ public class Pedido implements Serializable {
         this.total = total;
         this.empleado = empleado;
     }
+
+    public Pedido(Integer idpedido, Double total, Cliente cliente, Empleado empleado) {
+        this.idpedido = idpedido;
+        this.total = total;
+        this.cliente = cliente;
+        this.empleado = empleado;
+    }
     
     
     
